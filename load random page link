@@ -1,0 +1,10 @@
+
+						<?php function randomPage(){ 
+						    $pages = get_pages('portfolio'); //grab list of pages array - Cf. http://codex.wordpress.org/Function_Reference/get_pages 
+						    shuffle($pages);
+
+						    $pageLink = get_page_link($pages[0]->ID); 
+						    return '<a class="button" href="'.$pageLink.'">Go Random</a>'; 
+
+						} 
+						echo randomPage(); ?>
